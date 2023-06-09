@@ -30,7 +30,7 @@
       <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
           <img class ="nav-logo" src="photo/logo-unpam.png" alt="" width="100px" height="100px">
-          <span class="navbar-text fs-1">DATA MAHASISWA SISTEM INFORMASI</span>
+          <span class="navbar-text fs-1">DATA MAHASISWA SISTEM INFORMASI UNPAM</span>
         </div>
       </nav>
       <nav class="navbar navbar-light">
