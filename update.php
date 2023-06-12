@@ -6,11 +6,11 @@
     $alert;
 
     if(isset($_POST["submit"])){
-              if(ubah($_POST) > 0){
+              if(update($_POST) > 0){
                 echo '<div class="alert alert-success text-center" role="alert">
                         <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
                         <div>
-                          Data mahasiswa berhasil di ubah <br><a href="index.php" class="alert-link"> Kembali kehalama utama</a>
+                          Data mahasiswa berhasil di update <br><a href="index.php" class="alert-link"> Kembali kehalama utama</a>
                         </div>
                         </div>
                         ';
@@ -19,7 +19,7 @@
                   echo '<div class="alert alert-danger text-center" role="alert">
                         <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
                         <div>
-                          Data mahasiswa gagal di ubah
+                          Data mahasiswa gagal di update
                         </div>
                       </div>';
               }
@@ -64,11 +64,11 @@
 
 
     <div class="container">
-      <h1 class="text-center bg-primary p-3 h1">UBAH DATAMAHASISWA</h1>
+      <h1 class="text-center bg-primary p-3 h1">UPDATE DATA MAHASISWA</h1>
       <form class="row g-3" method="post">
         <div class="col-md-6">
           <label for="inputEmail4" class="form-label">Nim</label>
-          <input type="text" class="form-control" id="inputEmail4" name="nim" value="<?= $mhs['nim']?>" />
+          <input type="text" class="form-control" id="inputEmail4" name="nim" value="<?= $mhs['nim']?>" readonly />
         </div>
         <div class="col-md-6">
           <label for="inputPassword4" class="form-label">Nama</label>
@@ -118,7 +118,7 @@
         </div>
         <div class="col-12">
          <button type="button" class="btn btn-secondary"><a href="index.php" style="color:white; text-decoration:none;"><i class="bi bi-caret-left"></i>Kembali</a></button>
-          <button type="submit" class="btn btn-primary float-end mb-3" name="submit"><i class="bi bi-person-fill-gear"></i> Ubah</button>
+          <button type="submit" class="btn btn-primary float-end mb-3" name="submit"><i class="bi bi-person-fill-gear"></i> Update</button>
         </div>
       </form>
     </div>

@@ -1,3 +1,8 @@
+<!-- Nama : Satriyo Rizkyansah 
+     Nim : 221011700050
+     Kelas : 02SIFP002
+-->
+
 <?php 
   require 'functions.php';
   $mahasiswa = query("SELECT * FROM mahasiswa");

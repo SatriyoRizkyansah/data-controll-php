@@ -43,7 +43,7 @@
         return mysqli_affected_rows($conn);
     }
 
-    function ubah($data){
+    function update($data){
         global $conn;
          // ambil data dari tiap elemen dalam form
         //  "htmlspecialchars digunakan untuk mengantisipasi user jahat yang berniat merusak sistem"
