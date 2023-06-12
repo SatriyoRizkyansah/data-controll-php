@@ -93,11 +93,22 @@
           <label for="inlineRadioOptions" class="form-label" >Jenis Kelamin</label>
 
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" id="inlineRadio1" name="jns_kelamin" value="L" checked/>
+            <input class="form-check-input" type="radio" id="inlineRadio1" name="jns_kelamin" value="L" 
+            <?php if($mhs['jns_kelamin'] == 'L') {
+              echo "Checked";
+            } else {
+              echo "";
+            } 
+            ?>/>
             <label class="form-check-label" for="inlineRadio1">Laki-Laki</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" id="inlineRadio2" name="jns_kelamin" value="P"/>
+            <input class="form-check-input" type="radio" id="inlineRadio2" name="jns_kelamin" value="P"
+             <?php if($mhs['jns_kelamin'] == 'P') {
+              echo "Checked";
+            } else {
+              echo "";
+            } ?> />
             <label class="form-check-label" for="inlineRadio2">Perempuan</label>
           </div>
         </div>

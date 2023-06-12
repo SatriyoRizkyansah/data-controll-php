@@ -30,7 +30,7 @@
       <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
           <img class ="nav-logo" src="photo/logo-unpam.png" alt="" width="100px" height="100px">
-          <span class="navbar-text fs-1">DATA MAHASISWA SISTEM INFORMASI UNPAM</span>
+          <span class="navbar-text fs-1">DATA MAHASISWA SISTEM INFORMASI</span>
         </div>
       </nav>
       <nav class="navbar navbar-light">
@@ -73,7 +73,7 @@
           <td><?= $mhs["tgl_lahir"]?></td>
           <td>
             <a class="btn btn-outline-danger" href="hapus.php?nim=<?=$mhs['nim']?>" onclick="return confirm('yakin?');" role="button"><i class="bi bi-person-fill-dash"></i> Hapus</a> |
-            <a class="btn btn-outline-primary" href="ubah.php?nim=<?=$mhs['nim']?>" role="button"><i class="bi bi-person-fill-gear"></i> Ubah</a>
+            <a class="btn btn-outline-primary" href="update.php?nim=<?=$mhs['nim']?>" role="button"><i class="bi bi-person-fill-gear"></i> Update</a>
           </td>
         </tr>
         <?php endforeach;?>
