@@ -54,6 +54,7 @@
       <table class="table mt-3 ">
         <tr>
           <th class="table-secondary">Nim</th>
+          <th class="table-secondary">Foto</th>
           <th class="table-secondary">Nama Mahasiswa</th>
           <th class="table-secondary">Alamat</th>
           <th class="table-secondary">Kota</th>
@@ -65,6 +66,7 @@
         <?php foreach($mahasiswa as $mhs) : ?>
         <tr>
           <td><?= $mhs["nim"]?></td>
+          <td><img src="img/<?= $mhs["gambar"]?>" alt="" width="50"></td>
           <td><?= $mhs["nama_mhs"]?></td>
           <td><?= $mhs["alamat"]?></td>
           <td><?= $mhs["kota"]?></td>

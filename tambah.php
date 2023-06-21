@@ -60,7 +60,7 @@
   <body>
     <div class="container">
       <h1 class="text-center bg-primary p-3 h1">TAMBAH DATA MAHASISWA</h1>
-      <form class="row g-3" method="post">
+      <form class="row g-3" method="post" enctype="multipart/form-data">
         <div class="col-md-6">
           <label for="inputEmail4" class="form-label">Nim</label>
           <input type="text" class="form-control" id="inputEmail4" name="nim" />
@@ -68,6 +68,10 @@
         <div class="col-md-6">
           <label for="inputPassword4" class="form-label">Nama</label>
           <input type="text" class="form-control" id="inputPassword4" name="nama" />
+        </div>
+         <div class="input-group col-md-6">
+          <input type="file" class="form-control" id="inputGroupFile02" name="gambar">
+          <label class="input-group-text" for="inputGroupFile02">Foto</label>
         </div>
         <div class="col-12">
           <label for="exampleFormControlTextarea1" class="form-label">alamat</label>

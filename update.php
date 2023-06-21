@@ -56,16 +56,13 @@
      <!-- icon bootsrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     
-    <title>Ubah Data Mahasiswa</title>
+    <title>Update Data Mahasiswa</title>
   </head>
   <body>
 
-      
-
-
     <div class="container">
       <h1 class="text-center bg-primary p-3 h1">UPDATE DATA MAHASISWA</h1>
-      <form class="row g-3" method="post">
+      <form class="row g-3" method="post" enctype="multipart/form-data">
         <div class="col-md-6">
           <label for="inputEmail4" class="form-label">Nim</label>
           <input type="text" class="form-control" id="inputEmail4" name="nim" value="<?= $mhs['nim']?>" readonly />
@@ -73,6 +70,13 @@
         <div class="col-md-6">
           <label for="inputPassword4" class="form-label">Nama</label>
           <input type="text" class="form-control" id="inputPassword4" name="nama" value="<?= $mhs['nama_mhs']?>"/>
+        </div>
+        <div class="col-md-2">
+          <img src="img/<?= $mhs['gambar']?>" class="img-thumbnail" alt="..." width="100px">
+        </div>
+        <div class="col-md-10">
+          <label for="inputGroupFile02" class="mb-2">Foto : </label>
+          <input type="file" class="form-control" id="inputGroupFile02" name="gambar" >
         </div>
         <div class="col-12">
           <label for="exampleFormControlTextarea1" class="form-label">alamat</label>
