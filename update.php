@@ -63,25 +63,32 @@
     <div class="container">
       <h1 class="text-center bg-primary p-3 h1">UPDATE DATA MAHASISWA</h1>
       <form class="row g-3" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="gambarLama" value="<?= $mhs['gambar'];?>">
+
         <div class="col-md-6">
           <label for="inputEmail4" class="form-label">Nim</label>
           <input type="text" class="form-control" id="inputEmail4" name="nim" value="<?= $mhs['nim']?>" readonly />
         </div>
+
         <div class="col-md-6">
           <label for="inputPassword4" class="form-label">Nama</label>
           <input type="text" class="form-control" id="inputPassword4" name="nama" value="<?= $mhs['nama_mhs']?>"/>
         </div>
+
         <div class="col-md-2">
-          <img src="img/<?= $mhs['gambar']?>" class="img-thumbnail" alt="..." width="100px">
+          <img src="photo/ava/<?= $mhs['gambar']?>" class="img-thumbnail" alt="..." width="100px">
         </div>
+
         <div class="col-md-10">
           <label for="inputGroupFile02" class="mb-2">Foto : </label>
           <input type="file" class="form-control" id="inputGroupFile02" name="gambar" >
         </div>
+
         <div class="col-12">
           <label for="exampleFormControlTextarea1" class="form-label">alamat</label>
           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="alamat"><?= $mhs['alamat']?></textarea>
         </div>
+
         <div class="col-md-5">
           <label for="inputState" class="form-label">Kota</label>
           <select id="inputState" class="form-select" name="kota" value="<?= $mhs['kota']?>">
@@ -93,19 +100,21 @@
             <option value="Bandung">Bandung</option>
           </select>
         </div>
+
         <div class="col-md-2">
           <label for="inlineRadioOptions" class="form-label" >Jenis Kelamin</label>
 
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" id="inlineRadio1" name="jns_kelamin" value="L" 
-            <?php if($mhs['jns_kelamin'] == 'L') {
-              echo "Checked";
-            } else {
-              echo "";
-            } 
-            ?>/>
+              <?php if($mhs['jns_kelamin'] == 'L') {
+                echo "Checked";
+              } else {
+                echo "";
+              } 
+              ?>/>
             <label class="form-check-label" for="inlineRadio1">Laki-Laki</label>
           </div>
+
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" id="inlineRadio2" name="jns_kelamin" value="P"
              <?php if($mhs['jns_kelamin'] == 'P') {
@@ -116,6 +125,7 @@
             <label class="form-check-label" for="inlineRadio2">Perempuan</label>
           </div>
         </div>
+
         <div class="col-md-5">
           <label for="inputEmail4" class="form-label">Tanggal Lahir</label>
           <input type="date" class="form-control" id="inputEmail4" name="tgl_lahir" value="<?= $mhs['tgl_lahir']?>"/>
@@ -124,6 +134,7 @@
          <button type="button" class="btn btn-secondary"><a href="index.php" style="color:white; text-decoration:none;"><i class="bi bi-caret-left"></i>Kembali</a></button>
           <button type="submit" class="btn btn-primary float-end mb-3" name="submit"><i class="bi bi-person-fill-gear"></i> Update</button>
         </div>
+
       </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></>

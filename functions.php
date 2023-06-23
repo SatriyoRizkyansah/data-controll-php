@@ -83,7 +83,7 @@
         $namaFileBaru .= $ekstensiGambar;
 
 
-        move_uploaded_file($tmpName, 'img/' . $namaFile);
+        move_uploaded_file($tmpName, 'photo/ava/' . $namaFile);
 
             return $namaFile;
     }
@@ -107,11 +107,15 @@
         $kota = htmlspecialchars($data["kota"]);
         $jns_kelamin = htmlspecialchars($data["jns_kelamin"]);
         $tgl_lahir = htmlspecialchars($data["tgl_lahir"]);
+        $gambarLama = ($data["gambarLama"]);
 
-        $gambar = upload();
-            if( !$gambar ){
-                return false;
-            }
+         // cek apakah user pilih gambar baru ataua tidak
+        
+        if( $_FILES['gambar']['error'] === 4 ){
+            $gambar = $gambarLama;
+        } else { 
+            $gambar = upload();
+        }
 
          // query update data 
         $query = "UPDATE mahasiswa SET 

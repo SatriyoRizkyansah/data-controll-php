@@ -60,6 +60,7 @@
   <body>
     <div class="container">
       <h1 class="text-center bg-primary p-3 h1">TAMBAH DATA MAHASISWA</h1>
+      
       <form class="row g-3" method="post" enctype="multipart/form-data">
         <div class="col-md-6">
           <label for="inputEmail4" class="form-label">Nim</label>

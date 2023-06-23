@@ -66,7 +66,7 @@
         <?php foreach($mahasiswa as $mhs) : ?>
         <tr>
           <td><?= $mhs["nim"]?></td>
-          <td><img src="img/<?= $mhs["gambar"]?>" alt="" width="50"></td>
+          <td><img src="photo/ava/<?= $mhs["gambar"]?>" alt="" width="50"></td>
           <td><?= $mhs["nama_mhs"]?></td>
           <td><?= $mhs["alamat"]?></td>
           <td><?= $mhs["kota"]?></td>
