@@ -1,11 +1,17 @@
-<!-- Nama : Satriyo Rizkyansah 
-     Nim : 221011700050
-     Kelas : 02SIFP002
--->
-
 <?php 
+
+  session_start();
+
+  if(!isset($_SESSION["login"])){
+
+      header('location:login.php');
+      exit;
+
+  }
+
   require 'functions.php';
   $mahasiswa = query("SELECT * FROM mahasiswa");
+
 ?>
 
 <!DOCTYPE html>
@@ -31,6 +37,7 @@
     <title>Tabel Mahasiswa</title>
   </head>
   <body>
+
     <nav class="navbar bg-primary">
       <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
@@ -49,7 +56,8 @@
     </nav>
 
     <section class="tabel">
-      <button type="button" class="btn btn-secondary tambah-mhs"><a href="tambah.php" style="color:white; text-decoration: none;"><i class="bi bi-person-fill-add"></i> Tambah Data Mahasiswa</a></button>
+      <button type="button" class="btn btn-danger tambah-mhs"><a href="logout.php" style="color:white; text-decoration: none;"><i class="bi bi-arrow-left-circle-fill" ></i> logout</a></button>
+      <button type="button" class="btn btn-secondary tambah-mhs ms-2"><a href="tambah.php" style="color:white; text-decoration: none;"><i class="bi bi-person-fill-add"></i> Tambah Data Mahasiswa</a></button>
 
       <table class="table mt-3 ">
         <tr>

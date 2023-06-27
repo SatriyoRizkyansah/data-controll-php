@@ -83,9 +83,9 @@
         $namaFileBaru .= $ekstensiGambar;
 
 
-        move_uploaded_file($tmpName, 'photo/ava/' . $namaFile);
+        move_uploaded_file($tmpName, 'photo/ava/' . $namaFileBaru);
 
-            return $namaFile;
+            return $namaFileBaru;
     }
 
     function hapus($nim){
@@ -132,6 +132,45 @@
 
         // mysqli_affected_rows digunakan untuk mereturn nilai, jika > 1 maka data berhasil di tambahkan 
         // dan jika < 0 maka data gagal di tambahkan
+        return mysqli_affected_rows($conn);
+    }
+
+    function registrasi($data) {
+        global $conn;
+
+        $username = strtolower(stripslashes($data["username"]));
+        $password = mysqli_real_escape_string($conn, $data["password"]);
+        $password2 = mysqli_real_escape_string($conn, $data["password2"]);
+
+        // cek username sudah ada atau belum
+        $result = mysqli_query($conn, "SELECT username FROM user WHERE username = '$username'");
+
+        if ( mysqli_fetch_assoc($result) ) { 
+            // echo"
+            //     <script>
+            //         alert('Username sudah terdaftar!, silahkan registrasi menggunakan username yang berbeda!')
+            //     </script>
+            // ";
+            return false;
+        }
+
+
+        // cek konfirmasi password
+        if($password !== $password2){
+            // echo"
+            //     <script>
+            //         alert('Konfirmasi password tidak sesuai');
+            //     </script>
+            // ";
+            return false;
+        } 
+
+        // enkripsi password
+        $password = password_hash($password, PASSWORD_DEFAULT);
+
+        // tambahkan userbaru kedatabase
+        mysqli_query($conn, "INSERT INTO user VALUES('', '$username', '$password')");
+
         return mysqli_affected_rows($conn);
     }
 

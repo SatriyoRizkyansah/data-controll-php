@@ -1,4 +1,14 @@
 <?php 
+
+  session_start();
+
+ if(!isset($_SESSION["login"])){
+
+    header('location:login.php');
+    exit;
+    
+ }
+    
     // require untuk menghubungkan file function agar logic bisa di akses di halaman ini dan di tampilkan
     // require "functions.php";
     require "functions.php";
@@ -37,7 +47,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
     <!-- My Css -->
-    <link rel="stylesheet" href="css/style-tambah.css" />
+    <link rel="stylesheet" href="css/tambah.css" />
 
      <!-- Alert icon -->
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">

@@ -1,0 +1,25 @@
+body {
+  background-color: whitesmoke;
+}
+
+.container {
+  margin-top: 70px;
+  /* width: 40%; */
+  width: 500px;
+  /* height: 200px; */
+  background-color: white;
+  border-top: 12px solid #0684d8;
+  border-bottom: 8px solid white;
+  border-radius: 20px;
+  /* box-shadow: 5px 10px #888888; */
+}
+
+.footer {
+  border-radius: 10px;
+}
+
+.input {
+  width: 90%;
+  margin: auto;
+  padding: 50px;
+}
