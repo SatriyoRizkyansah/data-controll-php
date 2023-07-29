@@ -12,6 +12,10 @@
   require 'functions.php';
   $mahasiswa = query("SELECT * FROM mahasiswa");
 
+   if(isset($_POST["cari"]) ){
+        $mahasiswa = cari($_POST["keyword"]); 
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -47,10 +51,12 @@
       </nav>
       <nav class="navbar navbar-light">
         <div class="container-fluid">
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button class="btn bg-light" type="submit">Search</button>
+
+          <form class="d-flex" action="" method="post">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="keyword"/>
+            <button class="btn bg-light" type="submit" name="cari">Search</button>
           </form>
+
         </div>
       </nav>
     </nav>
@@ -94,12 +100,6 @@
         <?php endforeach;?>
       </table>
     </section>
-
-     <!-- Footer -->
-    <!-- <footer class="bg-primary text-white text-center pb-2">
-      <p>Created with <i class="bi bi-balloon-heart-fill text-danger"></i> by <a href="https://www.instagram.com/ryorizkyansah/" class="text-white fw-bold">Satriyo Rizkyansah</a></p>
-    </footer> -->
-    <!-- Akhir Footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
